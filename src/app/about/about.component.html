@@ -1,0 +1,23 @@
+<button routerLink="" mat-raised-button color="warn">&lt;&lt; Go back home</button>
+<pre>routerLink=""</pre>
+<h1>about works!</h1>
+<div class="alert alert-warning">
+    This whole page is <strong>also</strong> under the first router-outlet
+</div>
+<p>Learn Nested Routes in Angular.</p>
+<p>The following links are all children of AboutComponent</p>
+<p>
+    <button routerLink="/about/me" mat-raised-button color="primary">About Me</button> 
+    <button routerLink="you" mat-raised-button>About You</button> 
+    <button [routerLink]="['us', myInput.value]" mat-raised-button color="accent">About Us</button>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>About us...</mat-label>
+        <input #myInput matInput placeholder="Describe us">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Enter value then click again <strong>About Us</strong></mat-hint>
+    </mat-form-field>
+</p>
+<p>Below is another router-outlet</p>
+<hr>
+<router-outlet></router-outlet>
